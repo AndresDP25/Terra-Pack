@@ -8,49 +8,10 @@ import { motion } from 'framer-motion'
 import { fadeIn } from "@/variants"
 
 const Hero = () => {
-  const [isInternetActive, setIsInternetActive] = useState(false);
-  const [isEmpresasActive, setIsEmpresasActive] = useState(false);
-  const [isContactoActive, setIsContactoActive] = useState(false);
-
-  
-
-  useEffect(() => {
-
-    const handleScroll = () => {
-      const internetSection = document.getElementById('internet');
-      const contactoSection = document.getElementById('contacto');
-      const empresasSection = document.getElementById('empresas');
-  
-      if (internetSection) {
-        const { top, bottom } = internetSection.getBoundingClientRect();
-        setIsInternetActive(top <= window.innerHeight * 0.5 && bottom > window.innerHeight * 0.5);
-      }
-
-      if (empresasSection) {
-        const { top, bottom } = empresasSection.getBoundingClientRect();
-        setIsEmpresasActive(top <= window.innerHeight * 0.5 && bottom > window.innerHeight * 0.5);
-      }
-  
-      if (contactoSection) {
-        const { top, bottom } = contactoSection.getBoundingClientRect();
-        setIsContactoActive(top <= window.innerHeight * 0.5 && bottom > window.innerHeight * 0.5);
-      }
-
-    };
-    
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <section
-      className="flex flex-col bg-hero bg-top bg-no-repeat 
-      bg-cover pt-[148px] md:pt-[180px] lg:pt-[170px] pb-[343px] md:pb-[650px] 
-      lg:pb-[121px]" id="nosotros"
+      className="flex flex-col bg-hero bg-top bg-no-repeat bg-cover pt-[170px] lg:pt-[170px] pb-[121px] lg:pb-[121px]" id="nosotros"
     >
       <div className='container flex flex-col text-white gap-[45px]'>
         <h1 className='drop-shadow-lg mb-[25px]'>Por un futuro sustentable</h1>
