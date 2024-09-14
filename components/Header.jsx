@@ -27,9 +27,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`py-6 lg:pt-3 lg:pb-4 fixed top-0 w-full z-50 transition-all duration-200 xl:px-40 ${
-        active ? 'bg-green' : 'bg-transparent'
-      }`}
+      className={`py-6 lg:pt-3 lg:pb-4 fixed top-0 w-full z-50 transition-all duration-200 xl:px-40 bg-black`}
     >
       <div className="mx-auto">
         {/* logo, nav, btn  */}
@@ -37,14 +35,14 @@ const Header = () => {
           {/* logo */}
           <div>
             <Link href='/'>
-              <Image src='/logo-terra-pack.svg' width={131} height={54} alt="" className="hidden lg:block" />
+              <Image src='/logo-terra-pack.svg' width={387} height={109} alt="" className="hidden lg:block" />
               <Image src='/logo-terra-pack.svg' width={96} height={40} alt="" className="block lg:hidden" />
             </Link>
           </div>
           {/* nav  */}
-          <Nav containerStyles='hidden lg:flex gap-x-9 xl:gap-x-14 text-black' linkStyles='capitalize text-black' />
+          <Nav containerStyles='hidden md:flex gap-x-9 xl:gap-x-14 text-black' linkStyles='capitalize text-white' />
           {/* mobile nav  */}
-          <NavMobile containerStyles='lg:hidden' iconStyles='text-3xl' linkStyles='uppercase text-sm text-botons' />
+          <NavMobile containerStyles='md:hidden' iconStyles='text-3xl' linkStyles='uppercase text-sm text-white' />
         </div>
       </div>
     </header>

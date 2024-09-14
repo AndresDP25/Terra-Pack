@@ -7,15 +7,15 @@
         @apply box-border;
     }
     body {
-        @apply font-montserrat bg-body text-black tracking-[0.5px];
+        @apply font-mitr bg-body text-black tracking-[0.5px];
     }
     h1,
     h2,
     h3 {
-        @apply font-montserrat font-bold;
+        @apply font-mitr font-bold;
     }
     h1 {
-        @apply text-[50px] leading-[67px];
+        @apply text-[54px] leading-[67px];
     }
     h2 {
         @apply text-[30px] leading-[38px];
@@ -33,7 +33,7 @@
         @apply text-white text-base uppercase font-normal block mb-2;
     }
     .active {
-        @apply text-white font-bold
+        @apply text-white font-bold bg-[#00996E] p-2 rounded
     }
 }
 

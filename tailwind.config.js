@@ -11,12 +11,12 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "30px",
+      padding: "20px",
     },
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '1100px',
+      lg: '1280px',
       xl: '1740px',
       xxl: '2500px',
 
@@ -29,25 +29,23 @@ module.exports = {
       herosm: '#7C30D7',
       violet: '#9556E7',
       text: '#E7DDFF',
-      botons: {DEFAULT: '#8944DF', hover: '#6A2FB6'},
       grey: '#888888',
       outline: 'f1f1f1',
       pink: '#ffa5a5',
-      combos: '#8744DD',
-      combosCard:'#E6DCFF',
-      fcel: '#8844DE'
+      yellow: '#FAFF00',
     },
     extend: {
       fontFamily: {
         montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        mitr: ['var(--font-mitr)', 'sans-serif'],
+        lato: ['var(--font-lato)', 'sans-serif'],
       },
       backgroundImage: {
         hero: 'url(/hero/bg.png)',
-        television: 'url(/television/bg.png)',
-        empresas: 'url(/empresas/bg.png)',
-        cel: 'url(/cel/bg.png)',
-        celMobile: 'url(/cel/bg-mobile.png)',
-        general: 'url(/canales/01_general.png)',
+        productos: 'url(/productos/bg.png)',
+        carbono: 'url(/carbono/bg.png)',
+        cuidado: 'url(/cuidado/bg.png)',
+        sumate: 'url(/sumate/bg.png)',
       },
       boxShadow: {
         primary: '40px 4px 40px 0px rgba(68, 68, 0.25)'

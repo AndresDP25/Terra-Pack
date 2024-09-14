@@ -50,42 +50,20 @@ const Hero = () => {
     <section
       className="flex flex-col bg-hero bg-top bg-no-repeat 
       bg-cover pt-[148px] md:pt-[180px] lg:pt-[170px] pb-[343px] md:pb-[650px] 
-      lg:pb-[230px] h-screen" id="home"
+      lg:pb-[121px]" id="nosotros"
     >
-      {/* Iconos sociales */}
-      <div className="hidden lg:block fixed right-14 z-50 pt-20" >
-        {/* Iconos sociales claros */}
-        <div
-         className={`flex flex-col gap-[20px] justify-center ${isInternetActive || isEmpresasActive || isContactoActive ? 'lg:hidden' : ''} `}>
-          <Link href="#" target="blanck">
-            <Image src="/hero/instagram.png" width={37} height={37} alt="" />
-          </Link>
-          <Link href="#" target="blanck">
-            <Image src="/hero/linkedin.png" width={37} height={37} alt="" />
-          </Link>
-          <Link href="#">
-            <Image src="/hero/mail.png" width={37} height={37} alt="" target="blanck"/>
-          </Link>
-        </div>
-        {/* Iconos sociales oscuros */}
-        <div className={`flex flex-col gap-[20px] justify-center ${!isInternetActive &&  !isEmpresasActive && !isContactoActive ? 'lg:hidden' : ''}`}>
-          <Link href="#" target="blanck">
-            <Image src="/nav/ig_mobile.svg" width={37} height={37} alt="" />
-          </Link>
-          <Link href="#" target="blanck">
-            <Image src="/nav/linkedin_mobile.svg" width={37} height={37} alt="" />
-          </Link>
-          <Link href="#" target="blanck">
-            <Image src="/nav/mail_mobile.svg" width={37} height={37} alt="" />
-          </Link>
-        </div>
-      </div>
-      <div className='container flex flex-col text-white gap-10'>
-        <h1>Por un futuro sustentable</h1>
-        <h2 className='w-[780px]'>
+      <div className='container flex flex-col text-white gap-[45px]'>
+        <h1 className='drop-shadow-lg mb-[25px]'>Por un futuro sustentable</h1>
+        <h2 className='w-[601px] drop-shadow-lg font-lato text-[32px] font-bold'>
             Somos la primera empresa patagónica en comercializar envases compostables y en promover el consumo práctico y responsable.
         </h2>
-        <h2>¡Sumate a la economía del futuro!</h2>
+        <h2 className='drop-shadow-lg font-lato text-[32px] font-bold'>¡Sumate a la economía del futuro!</h2>
+        <Link href='https://drive.google.com/file/d/1_vGgRQ4WtwYfyuIbL5cfyUPELlCQw7fs/view?usp=sharing' target="blanck">
+          <button className='rounded-xl drop-shadow-lg gap-3 justify-center text-[22px] leading-[26px] lg:text-[22px] lg:leading-[29px] xl:text-[33px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-2 w-[210px] lg:w-[210px] xl:w-[220px] flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
+            <Image src="/hero/whatsapp.png" width={36} height={33} alt="" />
+            Contacto
+          </button>
+        </Link>
       </div>
     </section>
   );

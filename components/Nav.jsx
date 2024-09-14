@@ -9,12 +9,12 @@ const links = [
     offset: -49
   },
   {
-    path: 'nuestros-productos',
+    path: 'productos',
     name: 'Nuestros Productos',
     offset: -49
   },
   {
-    path: 'medio-ambiente',
+    path: 'cuidado',
     name: 'Medio Ambiente',
     offset: -39
   },

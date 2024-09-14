@@ -1,14 +1,13 @@
 "use client"
-import Combos from "@/components/Combos";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Internet from "@/components/Internet";
-import Contacto from "@/components/Contacto";
-import Empresas from "@/components/Empresas";
-import Television from "@/components/Television";
-import Cel from "@/components/Cel";
 import { useState } from "react";
+import Productos from "@/components/Productos";
+import Bioplasticos from "@/components/Bioplasticos";
+import Carbono from "@/components/Carbono";
+import Cuidado from "@/components/Cuidado";
+import Sumate from "@/components/Sumate";
 
 export default function Home() {
   const [internetPlan, setInternetPlan] = useState(null);
@@ -41,12 +40,11 @@ export default function Home() {
     <main className="w-full bg-white overflow-hidden">
       <Header />
       <Hero />
-      {/* <Combos handleSelectionsChangeC={handleSelectionsChangeC} /> */}
-      {/* <Internet handleContratarClickI={handleContratarClickI} /> */}
-      {/* <Television handleContratarClickT={handleContratarClickT} handleSelectionsChange={handleSelectionsChange} /> */}
-      {/* <Empresas handleContratarClickE={handleContratarClickE} /> */}
-      {/* <Cel /> */}
-      {/* <Contacto internetPlan={internetPlan} televisionPlan={televisionPlan} empresaPlan={empresaPlan} televisionPlanPropio={televisionPlanPropio} comboPlanPropio={comboPlanPropio} /> */}
+      <Productos />
+      <Bioplasticos />
+      <Carbono />
+      <Cuidado />
+      <Sumate />
       <Footer />
     </main>
   );

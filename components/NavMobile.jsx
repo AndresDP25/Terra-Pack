@@ -11,35 +11,24 @@ import Link from "next/link";
 
 const links = [
   {
-    path: "combos",
-    name: "combos",
+    path: 'nosotros',
+    name: 'Nosotros',
     offset: -80,
   },
   {
-    path: "internet",
-    name: "internet",
+    path: 'productos',
+    name: 'Nuestros Productos',
     offset: -80,
   },
   {
-    path: "television",
-    name: "televisión",
+    path: 'cuidado',
+    name: 'Medio Ambiente',
     offset: -80,
   },
   {
-    path: "empresas",
-    name: "empresas",
-    offset: -80,
-  },
-  {
-    path: "legales",
-    name: "legales",
-    customUrl: '/legales',
-  },
-  {
-    icon: <FaUsers />,
-    path: "contacto",
-    name: "contacto",
-    offset: -80,
+    path: 'contacto',
+    name: 'Contacto',
+    offset: -69
   },
 ];
 
@@ -57,7 +46,7 @@ const NavMobile = ({ containerStyles, linkStyles }) => {
       </div>
       <aside
         className={`${isOpen ? "right-0" : "-right-full"}
-        bg-text fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500 h-screen`}
+        bg-[#0A845C] fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500 h-screen`}
       >
         <div className="flex flex-col items-center justify-between h-full">
           {/* nav close btn  */}
@@ -65,11 +54,11 @@ const NavMobile = ({ containerStyles, linkStyles }) => {
             onClick={() => setIsOpen(false)}
             className="cursor-pointer text-4xl text-white absolute w-10 h-10 left-8 top-8 flex items-end justify-center"
           >
-            <IoCloseOutline style={{ color: "#8944DF" }} />
+            <IoCloseOutline style={{ color: "white" }} />
           </div>
           {/* logo  */}
           <Link href="/">
-            <Image src="/logo2.png" width={160} height={70} alt="" />
+            <Image src="/logo-terra-pack.svg" width={257} height={79} alt="" />
           </Link>
           {/* links  */}
           <div className="flex flex-col gap-y-12">
@@ -91,27 +80,22 @@ const NavMobile = ({ containerStyles, linkStyles }) => {
                 </ScrollLink>
               );
             })}
-            <div >
-              <Link href="http://200.55.246.250:5594/Autogestion/" target="blanck">
-                <div className="flex gap-x-6 items-center">
-                  <Image src="/nav/icono_user_mobile.svg" width={30} height={30} alt="" />
-                  <div className="uppercase text-sm text-botons">acceso</div>
-                </div>
-              </Link>
-            </div>
           </div>
           {/* btn */}
-          <div className="flex gap-[20px] text-white justify-center">
-              <Link href="https://www.instagram.com/gmxargentina/" target="blanck">
-                <Image src="/nav/ig_mobile.svg" width={37} height={37} alt="" />
-              </Link>
-              <Link href="https://ar.linkedin.com/in/gmx-argentina-internet-por-fibra-optica-2ab41029b" target="blanck">
-                <Image src="/nav/linkedin_mobile.svg" width={37} height={37} alt="" />
-              </Link>
-              <Link href="mailito:ventas@gmxargentina.com.ar" target="blanck">
-                <Image src="/nav/mail_mobile.svg" width={37} height={37} alt="" />
-              </Link>
-            </div>
+          <div className="flex gap-4 ml-8">
+            <Link href="#" target="blanck">
+              <Image src="/footer/twitter.png" width={30} height={30} alt="" />
+            </Link>
+            <Link href="#" target="blanck">
+              <Image src="/footer/ig.png" width={30} height={30} alt="" />
+            </Link>
+            <Link href="#" target="blanck">
+              <Image src="/footer/YouTube.png" width={30} height={30} alt="" />
+            </Link>
+            <Link href="#" target="blanck">
+              <Image src="/footer/LinkedIn.png" width={30} height={30} alt="" />
+            </Link>
+          </div>
         </div>
       </aside>
     </div>
