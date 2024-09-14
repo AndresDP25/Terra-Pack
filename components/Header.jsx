@@ -29,9 +29,9 @@ const Header = () => {
     <header 
       className={`py-6 lg:pt-3 lg:pb-4 fixed top-0 w-full z-50 transition-all duration-200 xl:px-40 bg-black`}
     >
-      <div className="mx-auto">
+      <div className="mr-[30px] ml-[30px]">
         {/* logo, nav, btn  */}
-        <div className="flex container items-center justify-between">
+        <div className="mx-auto flex items-center justify-between">
           {/* logo */}
           <div>
             <Link href='/'>
