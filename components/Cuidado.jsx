@@ -1,13 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { motion } from 'framer-motion'
+import { fadeIn } from "@/variants"
 
 const Cuidado = () => {
   return (
     <div className='flex flex-col bg-cuidado bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px]'>
-        <div className='container flex items-center text-white'>
+        <motion.div 
+        variants={fadeIn('up', 0.3)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{once: true, amount: 0.1}}
+        className='container flex items-center text-white'>
             <div className='flex flex-col gap-[40px] xl:gap-[70px]'>
-                <h1 className='font-semibold text-[#FED058] text-[45px] lg:text-[66px]'>Cuidando nuestros paisajes</h1>
+                <h1 className='font-semibold text-[#FED058] text-[45px] lg:text-[45px] xl:text-[66px]'>Cuidando nuestros paisajes</h1>
                 <div className='w-auto md:w-[600px] flex flex-col gap-[28px] xl:gap-[60px]'>
                     <h2 className='font-lato text-[24px] font-normal text-white leading-[30px]'>
                         Como habitantes de la Patagonia estamos en contacto constante con las maravillas visuales y sensoriales que nos ofrece la región.
@@ -26,7 +32,7 @@ const Cuidado = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </div>
   )
 }

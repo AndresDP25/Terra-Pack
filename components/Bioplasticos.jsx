@@ -1,10 +1,16 @@
 import Image from 'next/image'
-import React from 'react'
+import { motion } from 'framer-motion'
+import { fadeIn } from "@/variants"
 
 const Bioplasticos = () => {
   return (
     <div className='bg-[#0A845C] flex flex-col bg-top bg-no-repeat bg-cover md:pt-[50px] lg:pt-[10px] xl:lg:pt-[100px] pb-[50px] lg:pb-[10px] xl:pb-[100px]' id="cuidado">
-        <div className='container flex flex-col md:flex-row justify-center items-center text-white gap-1 xl:gap-28'>
+        <motion.div 
+        variants={fadeIn('up', 0.3)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{once: true, amount: 0.1}} 
+        className='container flex flex-col md:flex-row justify-center items-center text-white gap-1 xl:gap-28'>
             <div>
                 <Image src="/bioplasticos/Manzana.png" width={500} height={530} alt="" className='hidden md:block' />
                 <Image src="/bioplasticos/Manzana.png" width={300} height={530} alt="" className='md:hidden' />
@@ -23,7 +29,7 @@ const Bioplasticos = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </div>
   )
 }

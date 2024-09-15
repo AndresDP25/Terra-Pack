@@ -1,11 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { motion } from 'framer-motion'
+import { fadeIn } from "@/variants"
 
 const Carbono = () => {
   return (
     <div className='flex flex-col bg-white pt-[60px] lg:pt-[60px] xl:pt-[100px] pb-[40px] lg:pb-[70px] xl:lg:pb-[120px]'>
-        <div className='container flex items-center justify-center gap-8 xl:gap-60 text-white flex-col md:flex-row'>
+        <motion.div 
+        variants={fadeIn('up', 0.3)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{once: true, amount: 0.1}}
+        className='container flex items-center justify-center gap-8 xl:gap-60 text-white flex-col md:flex-row'>
             <div className='flex flex-col gap-[40px]'>
                 <h1 className='font-semibold text-black'>Adiós huella de carbono</h1>
                 <div className='w-auto md:w-[600px] flex flex-col gap-[38px] xl:gap-[70px]'>
@@ -27,7 +33,7 @@ const Carbono = () => {
                 <Image src="/carbono/hoja.png" width={250} height={150} alt="" className='hidden md:block' />
                 <Image src="/carbono/hoja.png" width={150} height={150} alt="" className='md:hidden' />
             </div>
-        </div>
+        </motion.div>
     </div>
   )
 }

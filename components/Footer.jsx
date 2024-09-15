@@ -2,11 +2,18 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from 'framer-motion'
+import { fadeIn } from "@/variants"
 
 const Footer = () => {
   return (
     <footer className="bg-white text-black pt-[30px] pb-[30px] xl:px-40" id="footer">
-      <div className="container flex flex-col md:flex-row justify-center items-center">
+      <motion.div 
+      variants={fadeIn('up', 0.3)}
+      initial='hidden'
+      whileInView={'show'}
+      viewport={{once: true, amount: 0.1}} 
+      className="container flex flex-col md:flex-row justify-center items-center">
         <div className="w-[50%] flex flex-col gap-3 xl:items-center">
           <div>
             <Image src="/footer/logo-footer.png" width={154} height={81} alt="" />
@@ -49,7 +56,7 @@ const Footer = () => {
           </div>
           
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

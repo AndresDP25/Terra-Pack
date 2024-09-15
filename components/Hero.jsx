@@ -1,7 +1,3 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion'
@@ -13,7 +9,12 @@ const Hero = () => {
     <section
       className="flex flex-col bg-hero bg-top bg-no-repeat bg-cover pt-[170px] lg:pt-[134px] pb-[121px] lg:pb-[90px] h-screen" id="nosotros"
     >
-      <div className='container flex flex-col text-white gap-[60px] md:gap-[24px] xl:gap-[55px]'>
+      <motion.div 
+      variants={fadeIn('up', 0.3)}
+      initial='hidden'
+      whileInView={'show'}
+      viewport={{once: true, amount: 0.1}}
+      className='container flex flex-col text-white gap-[60px] md:gap-[24px] xl:gap-[55px]'>
         <h1 className='drop-shadow-lg mb-[25px]'>Por un futuro sustentable</h1>
         <h2 className='w-[280px] md:w-[601px] xl:w-[900px] drop-shadow-lg font-lato font-bold'>
             Somos la primera empresa patagónica en comercializar envases compostables y en promover el consumo práctico y responsable.
@@ -25,7 +26,7 @@ const Hero = () => {
             Contacto
           </button>
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 };
