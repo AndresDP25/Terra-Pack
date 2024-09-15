@@ -22,7 +22,7 @@ const Footer = () => {
               <Image src="/footer/YouTube.png" width={18} height={18} alt="" />
             </Link>
             <Link href="#" target="blanck">
-              <Image src="/footer/LinkedIn.png" width={18} height={18} alt="" />
+              <Image src="/footer/linkedin.png" width={18} height={18} alt="" />
             </Link>
           </div>
         </div>

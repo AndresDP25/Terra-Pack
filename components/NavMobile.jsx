@@ -93,7 +93,7 @@ const NavMobile = ({ containerStyles, linkStyles }) => {
               <Image src="/footer/YouTube.png" width={30} height={30} alt="" />
             </Link>
             <Link href="#" target="blanck">
-              <Image src="/footer/LinkedIn.png" width={30} height={30} alt="" />
+              <Image src="/footer/linkedin.png" width={30} height={30} alt="" />
             </Link>
           </div>
         </div>
