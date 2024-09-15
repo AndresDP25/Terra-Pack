@@ -11,12 +11,18 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "20px",
+      padding: {
+        DEFAULT: "30px",  // Padding por defecto para mobile
+        sm: "30px",       // Puedes mantenerlo igual en pantallas pequeñas si lo deseas
+        md: "20px",       // Aumenta el padding en pantallas medianas
+        lg: "20px",       // Padding más amplio en pantallas grandes
+        xl: "20px",       // Aún más en pantallas extra grandes
+      },
     },
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '1100px',
+      lg: '1200px',
       xl: '1740px',
       xxl: '2500px',
 

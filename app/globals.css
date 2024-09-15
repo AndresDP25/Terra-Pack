@@ -15,16 +15,16 @@
         @apply font-mitr font-bold;
     }
     h1 {
-        @apply text-[54px] leading-[67px];
+        @apply text-[38px] leading-[46px]; 
     }
     h2 {
-        @apply text-[30px] leading-[38px];
+        @apply text-[21px] leading-[38px];
     }
     h3 {
         @apply text-[15px] leading-[22px];
     }
     p {
-        @apply text-black/80 text-[12px] leading-6;
+        @apply text-[20px] leading-[25px];
     }
     a {
         @apply text-white hover:text-white transition-all duration-300 cursor-pointer text-base
@@ -37,18 +37,37 @@
     }
 }
 
+@screen md {
+    h1 {
+        @apply text-[45px] leading-[55px];
+    }
+    h2 {
+        @apply text-[21px] leading-[38px];
+    }
+    h3 {
+        @apply text-[15px] leading-[22px];
+    }
+    p {
+        @apply text-[20px] leading-[25px];
+    }
+    a {
+        @apply text-base;
+    }
+    
+}
+
 @screen xl {
     h1 {
         @apply text-[66px] leading-[67px];
     }
     h2 {
-        @apply text-[47px] leading-[32px];
+        @apply text-[47px] leading-[50px];
     }
     h3 {
         @apply text-[35px] leading-[22px];
     }
     p {
-        @apply text-black/80 text-[22px] leading-10;
+        @apply text-[22px] leading-10;
     }
     a {
         @apply text-xl;
