@@ -20,7 +20,7 @@ const Hero = () => {
         </h2>
         <h2 className='drop-shadow-lg font-lato font-bold'>¡Sumate a la economía del futuro!</h2>
         <Link href='#' target="blanck">
-          <button className='rounded-xl drop-shadow-lg gap-2 justify-center text-[22px] leading-[26px] lg:text-[20px] lg:leading-[29px] xl:text-[33px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-1 px-6 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
+          <button className='rounded-xl drop-shadow-lg gap-2 justify-center text-[22px] leading-[26px] lg:text-[20px] lg:leading-[29px] xl:text-[33px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-6 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
             <Image src="/hero/whatsapp.png" width={30} height={30} alt="" />
             Contacto
           </button>

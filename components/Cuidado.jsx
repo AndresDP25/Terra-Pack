@@ -19,7 +19,7 @@ const Cuidado = () => {
                         Apoyando iniciativas de reciclado, compostaje u optando por usar productos ecológicos estás ayudando a preservar nuestros recursos naturales y destinos turísticos.
                     </p>
                     <Link href='#' target="blanck">
-                        <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-2 justify-center text-[22px] leading-[26px] lg:text-[22px] lg:leading-[29px] xl:text-[33px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-1 px-6 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
+                        <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-2 justify-center text-[22px] leading-[26px] lg:text-[22px] lg:leading-[29px] xl:text-[33px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-6 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
                             <Image src="/hero/whatsapp.png" width={30} height={30} alt="" />
                             Chateá con nosotros
                         </button>
