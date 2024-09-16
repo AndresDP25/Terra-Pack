@@ -35,7 +35,7 @@ const Header = () => {
           {/* logo */}
           <div>
             <Link href='/'>
-              <Image src='/logo-terra-pack.svg' width={180} height={40} alt="" className="hidden lg:block" />
+              <Image src='/logo-terra-pack.svg' width={280} height={40} alt="" className="hidden lg:block" />
               <Image src='/logo-terra-pack.svg' width={180} height={40} alt="" className="block lg:hidden" />
             </Link>
           </div>

@@ -10,7 +10,7 @@ const Sumate = () => {
         whileInView={'show'}
         viewport={{once: true, amount: 0.1}} 
         className='container'>
-            <h2 className='font-semibold drop-shadow-lg text-white text-center'>Sumate a la economía del futuro</h2>
+            <h1 className='font-semibold drop-shadow-lg text-white text-center'>Sumate a la economía del futuro</h1>
         </motion.div>
     </div>
   )
