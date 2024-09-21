@@ -15,9 +15,9 @@ const Productos = () => {
             whileInView={'show'}
             viewport={{once: true, amount: 0.1}}
             className='container flex flex-col justify-center items-center text-white gap-0 md:gap-6'>
-                <Image src="/productos/productos.png" width={400} height={250} alt=""  className='block xl:hidden'/>
+                <Image src="/productos/productos.png" width={500} height={350} alt=""  className='block xl:hidden'/>
                 <Image src="/productos/productos.png" width={500} height={350} alt="" className='hidden xl:block'/>
-                <h3 className='text-[#00996E] text-[30px] mt-[-20px] mb-16'>Nuestros productos</h3>
+                <h3 className='text-[#00996E] text-[40px] mt-[-20px] mb-12'>NUESTROS PRODUCTOS</h3>
                 <div className='hidden md:block'>
                     <Slider />
                 </div>
@@ -25,8 +25,8 @@ const Productos = () => {
                     <SliderM />
                 </div>
                 <Link href='#' target="blanck">
-                    <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-2 justify-center text-[22px] leading-[26px] lg:text-[22px] lg:leading-[29px] xl:text-[33px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-6 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[40px]'>
-                        <Image src="/hero/whatsapp.png" width={30} height={30} alt="" />
+                    <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-10 justify-center text-[16px] leading-[26px] lg:text-[16px] lg:leading-[29px] xl:text-[27px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-5 pr-16 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[40px]'>
+                        <Image src="/hero/whatsapp.png" width={40} height={36} alt="" />
                         Contactanos
                     </button>
                 </Link>

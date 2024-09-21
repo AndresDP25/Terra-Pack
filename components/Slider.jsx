@@ -16,9 +16,9 @@ const productos = [
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleLogos = 4.9; // Cantidad de logos visibles
+  const visibleLogos = 4.1; // Cantidad de logos visibles
   const slideInterval = 5000; // Intervalo de 5 segundos
-  const maxIndex = 3 // Índice máximo de desplazamiento manual
+  const maxIndex = 4 // Índice máximo de desplazamiento manual
 
   const handleNext = () => {
     if (currentIndex < maxIndex) {  // Limitar el desplazamiento al índice máximo

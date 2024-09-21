@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`py-6 lg:pt-3 lg:pb-4 fixed top-0 w-full z-50 transition-all duration-200 xl:px-40 bg-black`}
+      className={`py-2 lg:py-6 lg:pt-0 lg:pb-0 fixed top-0 w-full z-50 transition-all duration-200 xl:px-40 bg-black`}
     >
       <div className="mr-[30px] ml-[30px]">
         {/* logo, nav, btn  */}
@@ -35,8 +35,8 @@ const Header = () => {
           {/* logo */}
           <div>
             <Link href='/'>
-              <Image src='/logo-terra-pack.svg' width={280} height={40} alt="" className="hidden lg:block" />
-              <Image src='/logo-terra-pack.svg' width={180} height={40} alt="" className="block lg:hidden" />
+              <Image src='/logo-terra-pack.svg' width={391} height={109} alt="" className="hidden lg:block" />
+              <Image src='/logo-terra-pack.svg' width={260} height={40} alt="" className="block lg:hidden" />
             </Link>
           </div>
           {/* nav  */}

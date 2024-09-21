@@ -13,7 +13,7 @@ const Footer = () => {
       initial='hidden'
       whileInView={'show'}
       viewport={{once: true, amount: 0.1}} 
-      className="container flex flex-col md:flex-row justify-center items-center">
+      className="container flex flex-col md:flex-row justify-center items-center max-w-[1080px]">
         <div className="w-[50%] flex flex-col gap-3 xl:items-center">
           <div>
             <Image src="/footer/logo-footer.png" width={154} height={81} alt="" />

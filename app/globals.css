@@ -33,7 +33,7 @@
         @apply text-white text-base uppercase font-normal block mb-2;
     }
     .active {
-        @apply text-white font-bold bg-[#00996E] p-2 rounded
+        @apply text-white font-semibold bg-[#009951] p-2 rounded-lg
     }
 }
 
@@ -49,6 +49,25 @@
     }
     p {
         @apply text-[20px] leading-[25px];
+    }
+    a {
+        @apply text-base;
+    }
+    
+}
+
+@screen lg {
+    h1 {
+        @apply text-[54px] leading-[55px];
+    }
+    h2 {
+        @apply text-[32px] leading-[40px];
+    }
+    h3 {
+        @apply text-[15px] leading-[22px];
+    }
+    p {
+        @apply text-[24px] leading-[29px];
     }
     a {
         @apply text-base;
