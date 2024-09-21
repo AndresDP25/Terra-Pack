@@ -36,7 +36,7 @@ const Cuidado = () => {
         initial='hidden'
         whileInView={'show'}
         viewport={{ once: true, amount: 0.1 }}
-        className='container flex items-center text-white max-w-[1080px]'
+        className='container flex items-center text-white max-w-[1080px] xl:max-w-[1400px]'
       >
         <div className='flex flex-col gap-[40px] xl:gap-[70px]'>
           <h1 className='font-semibold text-[#FED058] text-[45px] lg:text-[45px] xl:text-[66px]'>

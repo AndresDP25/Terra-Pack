@@ -11,7 +11,7 @@ const Carbono = () => {
         initial='hidden'
         whileInView={'show'}
         viewport={{once: true, amount: 0.1}}
-        className='container flex items-center justify-center gap-8 xl:gap-60 text-white flex-col md:flex-row max-w-[1080px]'>
+        className='container flex items-center justify-center gap-8 xl:gap-60 text-white flex-col md:flex-row max-w-[1080px] xl:max-w-[1400px]'>
             <div className='flex flex-col gap-[40px]'>
                 <h1 className='font-semibold text-black lg:text-[64px]'>Adiós huella de carbono</h1>
                 <div className='w-auto md:w-[600px] flex flex-col gap-[38px] xl:gap-[70px]'>

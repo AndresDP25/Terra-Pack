@@ -10,7 +10,7 @@ const Bioplasticos = () => {
         initial='hidden'
         whileInView={'show'}
         viewport={{once: true, amount: 0.1}} 
-        className='container flex flex-col md:flex-row justify-center items-center text-white gap-1 xl:gap-28 max-w-[1080px]'>
+        className='container flex flex-col md:flex-row justify-center items-center text-white gap-1 xl:gap-28 max-w-[1080px] xl:max-w-[1400px]'>
             <div>
                 <Image src="/bioplasticos/Manzana.png" width={520} height={530} alt="" className='hidden md:block' />
                 <Image src="/bioplasticos/Manzana.png" width={300} height={530} alt="" className='md:hidden' />

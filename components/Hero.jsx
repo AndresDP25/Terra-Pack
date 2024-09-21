@@ -14,7 +14,7 @@ const Hero = () => {
       initial='hidden'
       whileInView={'show'}
       viewport={{once: true, amount: 0.1}}
-      className='container flex flex-col text-white gap-[60px] md:gap-[24px] lg:gap-[40px] xl:gap-[55px] max-w-[1080px]'>
+      className='container flex flex-col text-white gap-[60px] md:gap-[24px] lg:gap-[40px] xl:gap-[55px] max-w-[1080px] xl:max-w-[1400px]'>
         <h1 className='drop-shadow-lg mb-[21px]'>Por un futuro sustentable</h1>
         <h2 className='w-[280px] md:w-[601px] xl:w-[900px] drop-shadow-lg font-lato font-bold'>
             Somos la primera empresa patagónica en comercializar envases compostables y en promover el consumo práctico y responsable.
