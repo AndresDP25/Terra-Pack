@@ -5,20 +5,24 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 // Array de prod con width y height incluidos
 const productos = [
-  { src: '/productos/pack-cafe.png', width: 500, height: 200, nombre: 'Pack de Café 1' },
-  { src: '/productos/pack-cafe.png', width: 500, height: 200, nombre: 'Pack de Café 2' },
-  { src: '/productos/pack-cafe.png', width: 500, height: 200, nombre: 'Pack de Café 3' },
-  { src: '/productos/pack-cafe.png', width: 500, height: 200, nombre: 'Pack de Café 4' },
-  { src: '/productos/pack-cafe.png', width: 500, height: 200, nombre: 'Pack de Café 5' },
-  { src: '/productos/pack-cafe.png', width: 500, height: 200, nombre: 'Pack de Café 6' },
-  { src: '/productos/pack-cafe.png', width: 500, height: 200, nombre: 'Pack de Café 7' },
+  { src: '/productos/pack-cafe.png', width: 270, height: 263, nombre: 'Pack de Café 1' },
+  { src: '/productos/Bandeja-1.png', width: 270, height: 263, nombre: 'Bandeja 1' },
+  { src: '/productos/Bandeja-2.png', width: 270, height: 263, nombre: 'Bandeja 2' },
+  { src: '/productos/Bandeja-3.png', width: 270, height: 263, nombre: 'Bandeja 3' },
+  { src: '/productos/Bandeja-4.png', width: 270, height: 263, nombre: 'Bandeja 4' },
+  { src: '/productos/Bandeja-5.png', width: 270, height: 263, nombre: 'Bandeja 5' },
+  { src: '/productos/Bowl-1.png', width: 270, height: 263, nombre: 'Bowl 1' },
+  { src: '/productos/Bowl-2.png', width: 270, height: 263, nombre: 'Bowl 2' },
+  { src: '/productos/Cafe-2.png', width: 270, height: 263, nombre: 'Cafe 2' },
+  { src: '/productos/Cafe-4.png', width: 270, height: 263, nombre: 'Cafe 4' },
+  { src: '/productos/Cafe-5.png', width: 270, height: 263, nombre: 'Cafe 5' },
 ];
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleLogos = 4.1; // Cantidad de logos visibles
+  const visibleLogos = 5; // Cantidad de logos visibles
   const slideInterval = 5000; // Intervalo de 5 segundos
-  const maxIndex = 4 // Índice máximo de desplazamiento manual
+  const maxIndex = 8 // Índice máximo de desplazamiento manual
 
   const handleNext = () => {
     if (currentIndex < maxIndex) {  // Limitar el desplazamiento al índice máximo
@@ -46,7 +50,7 @@ const Slider = () => {
     <div className="relative w-full flex items-center justify-center">
       {/* Botón de navegación izquierda */}
       <button
-        className="absolute left-[22px] lg:left-[40px] z-20 opacity-50"
+        className="absolute left-[22px] lg:left-[70px] z-20 opacity-50"
         onClick={handlePrev}
       >
         <FaArrowLeft size={30} style={{ color: 'black' }} />
@@ -82,7 +86,7 @@ const Slider = () => {
 
       {/* Botón de navegación derecha */}
       <button
-        className="absolute right-[28px] lg:right-[40px] z-20 opacity-50"
+        className="absolute right-[28px] lg:right-[70px] z-20 opacity-50"
         onClick={handleNext}
         disabled={currentIndex >= maxIndex} // Deshabilitar botón si se llega al límite
       >

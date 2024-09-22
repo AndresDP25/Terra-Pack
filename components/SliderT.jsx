@@ -18,11 +18,11 @@ const productos = [
   { src: '/productos/Cafe-5.png', width: 500, height: 200, nombre: 'Cafe 5' },
 ];
 
-const SliderM = () => {
+const SliderT = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleLogos = 2.4; // Cantidad de logos visibles
+  const visibleLogos = 3.2; // Cantidad de logos visibles
   const slideInterval = 5000; // Intervalo de 5 segundos
-  const maxIndex = 10// Índice máximo de desplazamiento manual
+  const maxIndex = 9// Índice máximo de desplazamiento manual
 
   const handleNext = () => {
     if (currentIndex < maxIndex) {  // Limitar el desplazamiento al índice máximo
@@ -50,14 +50,14 @@ const SliderM = () => {
     <div className="relative w-full flex items-center justify-center">
       {/* Botón de navegación izquierda */}
       <button
-        className="absolute left-[80px] z-20 opacity-50"
+        className="absolute left-[50px] z-20 opacity-50"
         onClick={handlePrev}
       >
         <FaArrowLeft size={30} style={{ color: 'black' }} />
       </button>
 
       {/* Contenedor de los logos */}
-      <div className="overflow-hidden w-[50%]"> {/* Ajusta el tamaño del contenedor */}
+      <div className="overflow-hidden w-[70%]"> {/* Ajusta el tamaño del contenedor */}
         <motion.div
           className="flex"
           animate={{ x: `-${currentIndex * (50 / visibleLogos)}%` }}
@@ -84,7 +84,7 @@ const SliderM = () => {
 
       {/* Botón de navegación derecha */}
       <button
-        className="absolute right-[80px] z-20 opacity-50"
+        className="absolute right-[50px] z-20 opacity-50"
         onClick={handleNext}
         disabled={currentIndex >= maxIndex} // Deshabilitar botón si se llega al límite
       >
@@ -94,4 +94,4 @@ const SliderM = () => {
   );
 };
 
-export default SliderM;
+export default SliderT;

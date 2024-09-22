@@ -40,9 +40,9 @@ const Header = () => {
             </Link>
           </div>
           {/* nav  */}
-          <Nav containerStyles='hidden md:flex gap-x-9 xl:gap-x-14 text-black' linkStyles='capitalize text-white' />
+          <Nav containerStyles='hidden lg:flex gap-x-9 xl:gap-x-14 text-black' linkStyles='capitalize text-white' />
           {/* mobile nav  */}
-          <NavMobile containerStyles='md:hidden' iconStyles='text-3xl' linkStyles='uppercase text-sm text-white' />
+          <NavMobile containerStyles='lg:hidden' iconStyles='text-3xl' linkStyles='uppercase text-sm text-white' />
         </div>
       </div>
     </header>

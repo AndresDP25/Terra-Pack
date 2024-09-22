@@ -26,7 +26,7 @@ const links = [
     offset: -80,
   },
   {
-    path: 'contacto',
+    path: 'footer',
     name: 'Contacto',
     offset: -69
   },
@@ -46,9 +46,9 @@ const NavMobile = ({ containerStyles, linkStyles }) => {
       </div>
       <aside
         className={`${isOpen ? "right-0" : "-right-full"}
-        bg-[#0A845C] fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500 h-screen`}
+        bg-black fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500 h-screen`}
       >
-        <div className="flex flex-col items-center justify-between h-full">
+        <div className="flex flex-col items-center justify-around h-full">
           {/* nav close btn  */}
           <div
             onClick={() => setIsOpen(false)}
@@ -80,21 +80,6 @@ const NavMobile = ({ containerStyles, linkStyles }) => {
                 </ScrollLink>
               );
             })}
-          </div>
-          {/* btn */}
-          <div className="flex gap-4 ml-8">
-            <Link href="#" target="blanck">
-              <Image src="/footer/twitter.png" width={30} height={30} alt="" />
-            </Link>
-            <Link href="#" target="blanck">
-              <Image src="/footer/ig.png" width={30} height={30} alt="" />
-            </Link>
-            <Link href="#" target="blanck">
-              <Image src="/footer/YouTube.png" width={30} height={30} alt="" />
-            </Link>
-            <Link href="#" target="blanck">
-              <Image src="/footer/linkedin.png" width={30} height={30} alt="" />
-            </Link>
           </div>
         </div>
       </aside>

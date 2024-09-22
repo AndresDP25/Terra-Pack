@@ -12,11 +12,11 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "30px",  // Padding por defecto para mobile
-        sm: "30px",       // Puedes mantenerlo igual en pantallas pequeñas si lo deseas
-        md: "20px",       // Aumenta el padding en pantallas medianas
-        lg: "20px",       // Padding más amplio en pantallas grandes
-        xl: "20px",       // Aún más en pantallas extra grandes
+        DEFAULT: "30px", 
+        sm: "30px",       
+        md: "20px",       
+        lg: "20px",       
+        xl: "20px",       
       },
     },
     screens: {
@@ -69,6 +69,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'spin-slow': 'spin 10s linear infinite',
       },
     },
   },

@@ -5,6 +5,7 @@ import Slider from './Slider';
 import SliderM from './SliderM';
 import { motion } from 'framer-motion'
 import { fadeIn } from "@/variants"
+import SliderT from './SliderT';
 
 const Productos = () => {
   return (
@@ -17,9 +18,12 @@ const Productos = () => {
             className='container flex flex-col justify-center items-center text-white gap-0 md:gap-6'>
                 <Image src="/productos/productos.png" width={500} height={350} alt=""  className='block xl:hidden'/>
                 <Image src="/productos/productos.png" width={500} height={350} alt="" className='hidden xl:block'/>
-                <h3 className='text-[#00996E] text-[40px] leading-[46px] mt-[-20px] mb-12'>NUESTROS PRODUCTOS</h3>
-                <div className='hidden md:block'>
+                <h3 className='text-[#00996E] text-[40px] leading-[46px] mt-[-20px] mb-12 text-center lg:text-left'>NUESTROS PRODUCTOS</h3>
+                <div className='hidden lg:block'>
                     <Slider />
+                </div>
+                <div className='hidden md:block lg:hidden'>
+                    <SliderT />
                 </div>
                 <div className='block md:hidden'>
                     <SliderM />

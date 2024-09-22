@@ -13,48 +13,18 @@ const Footer = () => {
       initial='hidden'
       whileInView={'show'}
       viewport={{once: true, amount: 0.1}} 
-      className="container flex flex-col md:flex-row justify-center items-center max-w-[1080px] xl:max-w-[1400px]">
+      className="container flex flex-col md:flex-row justify-between items-center max-w-[1080px] xl:max-w-[1400px]">
         <div className="w-[50%] flex flex-col gap-3 xl:items-center">
-          <div>
-            <Image src="/footer/logo-footer.png" width={154} height={81} alt="" />
-          </div>
-          <div className="flex gap-2 ml-7">
-            <Link href="#" target="blanck">
-              <Image src="/footer/twitter.png" width={18} height={18} alt="" />
-            </Link>
-            <Link href="#" target="blanck">
-              <Image src="/footer/ig.png" width={18} height={18} alt="" />
-            </Link>
-            <Link href="#" target="blanck">
-              <Image src="/footer/YouTube.png" width={18} height={18} alt="" />
-            </Link>
-            <Link href="#" target="blanck">
-              <Image src="/footer/linkedin.png" width={18} height={18} alt="" />
-            </Link>
-          </div>
+            <Image src="/footer/logo-footer.png" width={203} height={133} alt="" />
         </div>
-        <div className="flex w-[50%] gap-[100px] lg:gap-[218px] justify-center md:justify-normal mt-10 md:mt-0">
-          <div className="flex flex-col gap-[35px]">
-            <h3 className="font-semibold text-[22px]">Explore</h3>
-            <ul className="flex flex-col gap-[12px]">
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-[35px]">
-          <h3 className="font-semibold text-[22px]">Resources</h3>
-            <ul className="flex flex-col gap-[12px]">
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-              <li>Xxxxxxx</li>
-            </ul>
-          </div>
-          
+        <div className="flex flex-col gap-[30px] md:gap-[30px] justify-center md:justify-normal mt-10 md:mt-0 md:text-end md:w-[405px] font-lato">
+          <p className="text-[16px]">
+            Félix San Martín 684 — Junín de los Andes Neuquén, Argentina
+          </p>
+          <p className="text-[16px]">
+            +54 9 11 6930-8406 para mensajes. 
+            (Llamadas sólo arreglando horarios previamente)
+          </p>
         </div>
       </motion.div>
     </footer>

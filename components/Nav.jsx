@@ -19,7 +19,7 @@ const links = [
     offset: -39
   },
   {
-    path: 'contacto',
+    path: 'footer',
     name: 'Contacto',
     offset: -69
   },
