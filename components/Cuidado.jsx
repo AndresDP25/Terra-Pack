@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from "@/variants";
 
 const images = [
-    '/backgrounds/7-Lagos.jpg', 
+  '/backgrounds/7-Lagos.jpg', 
   '/backgrounds/Glaciares-1.png',
   '/backgrounds/Glaciares-2.jpg',
   '/backgrounds/Peninsula-Valdes-1.png', 
@@ -17,13 +17,21 @@ const images = [
 
 const Cuidado = () => {
   const [currentImage, setCurrentImage] = useState(0);
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 5000); // Cambia cada 5 segundos
 
     return () => clearInterval(interval);
+  }, []);
+
+  // Preload images
+  useEffect(() => {
+    images.forEach(src => {
+      const img = new window.Image(); // Cambia aquí
+      img.src = src;
+    });
   }, []);
 
   return (
