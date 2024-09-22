@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from "@/variants";
 
 const images = [
-  '/backgrounds/7-Lagos.jpg', 
+    '/backgrounds/7-Lagos.jpg', 
   '/backgrounds/Glaciares-1.png',
   '/backgrounds/Glaciares-2.jpg',
   '/backgrounds/Peninsula-Valdes-1.png', 
@@ -17,21 +17,13 @@ const images = [
 
 const Cuidado = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 5000); // Cambia cada 5 segundos
 
     return () => clearInterval(interval);
-  }, []);
-
-  // Preload images
-  useEffect(() => {
-    images.forEach(src => {
-      const img = new window.Image(); // Cambia aquí
-      img.src = src;
-    });
   }, []);
 
   return (
@@ -60,7 +52,7 @@ const Cuidado = () => {
             <p className='font-lato font-normal text-white'>
               Apoyando iniciativas de reciclado, compostaje u optando por usar productos ecológicos estás ayudando a preservar nuestros recursos naturales y destinos turísticos.
             </p>
-            <Link href='https://wa.me/5491169308406' target="_blank">
+            <Link href='#' target="blanck">
               <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-2 justify-center text-[17px] leading-[26px] lg:text-[17px] lg:leading-[29px] xl:text-[27px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-5 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
                 <Image src="/hero/whatsapp.png" width={30} height={30} alt="" />
                 Chateá con nosotros
