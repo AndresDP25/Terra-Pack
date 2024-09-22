@@ -16,9 +16,9 @@ export default function Home() {
       <Header />
       <Hero />
       <Productos />
+      <Cuidado />
       <Bioplasticos />
       <Carbono />
-      <Cuidado />
       <Sumate />
       <Footer />
     </main>

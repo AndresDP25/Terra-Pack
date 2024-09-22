@@ -28,7 +28,7 @@ const Productos = () => {
                 <div className='block md:hidden'>
                     <SliderM />
                 </div>
-                <Link href='#' target="blanck">
+                <Link href='https://wa.me/5491169308406' target="_blank">
                     <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-10 justify-center text-[16px] leading-[26px] lg:text-[16px] lg:leading-[29px] xl:text-[27px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-5 pr-16 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[40px]'>
                         <Image src="/hero/whatsapp.png" width={40} height={36} alt="" />
                         Contactanos
