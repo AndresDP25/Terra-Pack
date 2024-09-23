@@ -28,8 +28,8 @@ const Cuidado = () => {
 
   return (
     <div
-      className='flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px]'
-      style={{ backgroundImage: `url(${images[currentImage]})`, transition: 'background-image 1s ease-in-out' }}
+      className='flex flex-col bg-green bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px]'
+      style={{ backgroundImage: `url(${images[currentImage]})`, transition: 'background-image 2s ease-in-out' }}
     >
       <motion.div
         variants={fadeIn('up', 0.3)}
