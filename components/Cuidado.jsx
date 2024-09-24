@@ -28,16 +28,27 @@ const Cuidado = () => {
   }, []);
 
   return (
-    <div
-      // Aplica la clase de fondo dinámica usando Tailwind
-      className={`flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px] transition-all duration-500 ease-in-out ${backgroundClasses[currentBackground]}`}
-    >
+    <div className="flex flex-col overflow-hidden relative">
+      <motion.div
+        className={`absolute inset-0 bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out ${backgroundClasses[currentBackground]}`}
+        initial={{ x: '100%' }} // Comienza desde la derecha
+        animate={{ x: '0%' }} // Se mueve a la posición original
+        exit={{ x: '-100%' }} // Sale hacia la izquierda
+        transition={{ duration: 1 }} // Duración de la transición
+      />
+      <motion.div
+        className={`absolute inset-0 bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out ${backgroundClasses[(currentBackground + 1) % backgroundClasses.length]}`}
+        initial={{ x: '100%' }}
+        animate={{ x: '0%' }}
+        exit={{ x: '-100%' }}
+        transition={{ duration: 1 }}
+      />
       <motion.div
         variants={fadeIn('up', 0.3)}
         initial='hidden'
         whileInView={'show'}
         viewport={{ once: true, amount: 0.1 }}
-        className='container flex items-center text-white max-w-[1080px] xl:max-w-[1400px]'
+        className='container flex items-center text-white max-w-[1080px] xl:max-w-[1400px] relative z-10' // Agregamos un z-index para que el texto esté encima del fondo
       >
         <div className='flex flex-col gap-[40px] xl:gap-[70px]'>
           <h1 className='font-semibold text-[#FED058] text-[45px] lg:text-[45px] xl:text-[66px]'>
