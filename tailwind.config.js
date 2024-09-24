@@ -52,6 +52,14 @@ module.exports = {
         carbono: 'url(/carbono/bg.png)',
         cuidado: 'url(/cuidado/bg.png)',
         sumate: 'url(/sumate/bg.png)',
+        lago: 'url(/backgrounds/7-Lagos.jpg)',
+        glaciares: 'url(/backgrounds/Glaciares-1.png)',
+        glaciares2: 'url(/backgrounds/Glaciares-2.jpg)',
+        peninsula: 'url(/backgrounds/Peninsula-Valdes-1.png)',
+        peninsula2: 'url(/backgrounds/Peninsula-Valdes-2.jpg)',
+        valle: 'url(/backgrounds/Valle-de-Gondwana.png)',
+        villa: 'url(/backgrounds/Villa-La-Angostura.png)',
+        volcan: 'url(/backgrounds/Volcan-Lanin.jpg)',
       },
       boxShadow: {
         primary: '40px 4px 40px 0px rgba(68, 68, 0.25)'

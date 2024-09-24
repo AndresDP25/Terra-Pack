@@ -4,23 +4,24 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeIn } from "@/variants";
 
-const images = [
-    '/backgrounds/7-Lagos.jpg', 
-  '/backgrounds/Glaciares-1.png',
-  '/backgrounds/Glaciares-2.jpg',
-  '/backgrounds/Peninsula-Valdes-1.png', 
-  '/backgrounds/Peninsula-Valdes-2.jpg', 
-  '/backgrounds/Valle-de-Gondwana.png', 
-  '/backgrounds/Villa-La-Angostura.png', 
-  '/backgrounds/Volcan-Lanin.jpg', 
+// Clases de Tailwind para los fondos
+const backgroundClasses = [
+  'bg-lago', 
+  'bg-glaciares',
+  'bg-glaciares2',
+  'bg-peninsula',
+  'bg-peninsula2',
+  'bg-valle',
+  'bg-villa',
+  'bg-volcan',
 ];
 
 const Cuidado = () => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentBackground, setCurrentBackground] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      setCurrentBackground((prevBackground) => (prevBackground + 1) % backgroundClasses.length);
     }, 5000); // Cambia cada 5 segundos
 
     return () => clearInterval(interval);
@@ -28,8 +29,8 @@ const Cuidado = () => {
 
   return (
     <div
-      className='flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px]'
-      style={{ backgroundImage: `url(${images[currentImage]})`, transition: 'background-image 2s ease-in-out' }}
+      // Aplica la clase de fondo dinámica usando Tailwind
+      className={`flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px] transition-all duration-500 ease-in-out ${backgroundClasses[currentBackground]}`}
     >
       <motion.div
         variants={fadeIn('up', 0.3)}
