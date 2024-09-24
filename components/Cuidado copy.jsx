@@ -4,52 +4,33 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeIn } from "@/variants";
 
-const images = [
-  '/backgrounds/7-Lagos.jpg', 
-  '/backgrounds/Glaciares-1.png',
-  '/backgrounds/Glaciares-2.jpg',
-  '/backgrounds/Peninsula-Valdes-1.png', 
-  '/backgrounds/Peninsula-Valdes-2.jpg', 
-  '/backgrounds/Valle-de-Gondwana.png', 
-  '/backgrounds/Villa-La-Angostura.png', 
-  '/backgrounds/Volcan-Lanin.jpg', 
+// Clases de Tailwind para los fondos
+const backgroundClasses = [
+  'bg-lago', 
+  'bg-glaciares',
+  'bg-glaciares2',
+  'bg-peninsula',
+  'bg-peninsula2',
+  'bg-valle',
+  'bg-villa',
+  'bg-volcan',
 ];
 
 const Cuidado = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [loadedImages, setLoadedImages] = useState(Array(images.length).fill(false));
+  const [currentBackground, setCurrentBackground] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      setCurrentBackground((prevBackground) => (prevBackground + 1) % backgroundClasses.length);
     }, 5000); // Cambia cada 5 segundos
 
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    // Carga las imágenes de fondo de forma perezosa
-    const loadImages = () => {
-      images.forEach((src, index) => {
-        const img = new window.Image(); // Usa window.Image para asegurar que esté disponible
-        img.src = src;
-        img.onload = () => {
-          setLoadedImages((prev) => {
-            const newLoaded = [...prev];
-            newLoaded[index] = true; // Marca la imagen como cargada
-            return newLoaded;
-          });
-        };
-      });
-    };
-
-    loadImages();
-  }, []);
-
   return (
     <div
-      className='flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px]'
-      style={{ backgroundImage: loadedImages[currentImage] ? `url(${images[currentImage]})` : 'none', transition: 'background-image 2s ease-in-out' }}
+      // Aplica la clase de fondo dinámica usando Tailwind
+      className={`flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px] transition-all duration-500 ease-in-out ${backgroundClasses[currentBackground]}`}
     >
       <motion.div
         variants={fadeIn('up', 0.3)}
@@ -74,7 +55,7 @@ const Cuidado = () => {
             </p>
             <Link href='#' target="blanck">
               <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-2 justify-center text-[17px] leading-[26px] lg:text-[17px] lg:leading-[29px] xl:text-[27px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-5 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
-                <Image src="/hero/whatsapp.png" width={30} height={30} alt="" loading="lazy" />
+                <Image src="/hero/whatsapp.png" width={30} height={30} alt="" />
                 Chateá con nosotros
               </button>
             </Link>
