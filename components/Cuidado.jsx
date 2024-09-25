@@ -17,46 +17,44 @@ const images = [
 
 const Cuidado = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [loadedImages, setLoadedImages] = useState(Array(images.length).fill(false));
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setLoaded(false); // Reinicia el estado de carga
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 5000); // Cambia cada 5 segundos
 
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    // Carga las imágenes de fondo de forma perezosa
-    const loadImages = () => {
-      images.forEach((src, index) => {
-        const img = new window.Image(); // Usa window.Image para asegurar que esté disponible
-        img.src = src;
-        img.onload = () => {
-          setLoadedImages((prev) => {
-            const newLoaded = [...prev];
-            newLoaded[index] = true; // Marca la imagen como cargada
-            return newLoaded;
-          });
-        };
-      });
-    };
-
-    loadImages();
-  }, []);
-
   return (
-    <div
-      className='flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px]'
-      style={{ backgroundImage: loadedImages[currentImage] ? `url(${images[currentImage]})` : 'none', transition: 'background-image 2s ease-in-out' }}
-    >
+    <div className='relative flex flex-col bg-center bg-no-repeat bg-cover pt-[35px] lg:pt-[35px] xl:pt-[100px] pb-[50px] lg:pb-[50px] xl:lg:pb-[100px]'>
+      {/* Background Image Slider */}
+      <div className="absolute inset-0 w-full h-full">
+        {images.map((img, index) => (
+          <div 
+            key={index}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-2000 ease-in-out ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
+            style={{ transition: 'opacity 2s ease-in-out' }}
+          >
+            <Image
+              src={img}
+              alt={`Fondo ${index}`}
+              layout='fill'
+              objectFit='cover'
+              onLoadingComplete={() => setLoaded(true)} // Marca la imagen como cargada
+            />
+          </div>
+        ))}
+      </div>
+
       <motion.div
         variants={fadeIn('up', 0.3)}
         initial='hidden'
         whileInView={'show'}
         viewport={{ once: true, amount: 0.1 }}
-        className='container flex items-center text-white max-w-[1080px] xl:max-w-[1400px]'
+        className='container relative flex items-center text-white max-w-[1080px] xl:max-w-[1400px]'
       >
         <div className='flex flex-col gap-[40px] xl:gap-[70px]'>
           <h1 className='font-semibold text-[#FED058] text-[45px] lg:text-[45px] xl:text-[66px]'>
@@ -74,7 +72,7 @@ const Cuidado = () => {
             </p>
             <Link href='#' target="blanck">
               <button className='rounded-xl border border-[#C4C4C4] drop-shadow-lg gap-2 justify-center text-[17px] leading-[26px] lg:text-[17px] lg:leading-[29px] xl:text-[27px] xl:leading-[39px] bg-white text-black font-montserrat font-normal py-3 md:py-1 px-5 flex items-center hover:scale-105 transition duration-300 ease-in-out mt-[15px]'>
-                <Image src="/hero/whatsapp.png" width={30} height={30} alt="" loading="lazy" />
+                <Image src="/hero/whatsapp.png" width={30} height={30} alt="" />
                 Chateá con nosotros
               </button>
             </Link>
